@@ -45,7 +45,7 @@ function calc(){
                                     <p>Sua nota na Avd é  ${avd}</p>
                                        <p>Total:  ${round}</p>`
 
-         result.innerHTML +=`<p style="color: rgb(224, 0, 0)">Você esta reprovado</p>`
+         result.innerHTML +=`<p class="text-danger">Você esta reprovado</p>`
          
       }else if(sum >= 4){
          result.innerHTML = `  <p>Sua nota na Av1 é  ${av1}</p>
@@ -53,9 +53,9 @@ function calc(){
                                     <p>Sua nota na Avd é  ${avd}</p>
                                        <p>Total:  ${round}</p>`
 
-         result.innerHTML +=`<p style="color: rgb(35, 212, 0);">Você esta aprovado</p>`
+         result.innerHTML +=`<p class="text-success">Você esta aprovado</p>`
       }else{                    
-         result.innerHTML +=`<p style="color: rgb(555, 212, 0);"> Err 202 ? Chame o suport</p>` 
+         result.innerHTML +=`<p class="text-warning"> Err 202 ? Chame o suport</p>` 
       }
    
    
