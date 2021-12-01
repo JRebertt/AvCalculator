@@ -19,15 +19,39 @@
 
   
     <div class="content">
-      <h2>Calculadora Av Estacio</h2>
-      <div class="main">
-        <input id="Av1" type="number" placeholder="Nota Av1">
-        <input id="Av2" type="number" placeholder="Nota Av2">
-        <input id="Avd" type="number" placeholder="Nota AvD">
-        <button id="btn" onclick="calc()">Calcular</button>
 
-        <div id="result">
+      <!--Main content Left-->
+      <div class="main">
+
+        <h2>Calculadora Av Estacio</h2>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Nota Av1</label>
+          <input type="text" class="form-control" id="Av1" type="number" placeholder="Ex: 8.5" required onkeypress="return onlynumber();">
         </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Nota Av2</label>
+          <input type="text" class="form-control" id="Av2" type="number" placeholder="Ex: 2.5" required onkeypress="return onlynumber();">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Nota Avd</label>
+          <input type="text" class="form-control" id="Avd" type="number" placeholder="Ex: 10" required onkeypress="return onlynumber();">
+        </div>
+
+        <button id="button" type="button" class="btn btn-primary" onclick="calc()">Calcular</button>
+
+      </div>
+
+
+      <!--Main content Right-->
+      <div id="resultado" class="main-content">
+        <h2>Resultado</h2>
+        <p>Sua nota na Av1 é  ${av1}</p>
+                                 <p>Sua nota na Av2 é  22<p>
+                                    <p>Sua nota na Avd é  22<p>
+                                       <p>Total:  22</p>
+
+         <p style="color: rgb(224, 0, 0)">Você esta reprovado</p>
       </div>
     </div>
   

@@ -2,8 +2,22 @@ let inputAv1 =  document.getElementById('Av1');
 let inputAv2 = document.getElementById('Av2');
 let inputAvd =  document.getElementById('Avd');
 
-const result = document.getElementById('result');
+const result = document.getElementById('resultado');
 const space = document.getElementById('space');
+
+
+//Tratando inputs
+function onlynumber(evt) {
+   var theEvent = evt || window.event;
+   var key = theEvent.keyCode || theEvent.which;
+   key = String.fromCharCode( key );
+   //var regex = /^[0-9.,]+$/;
+   var regex = /^[0-9.]+$/;
+   if( !regex.test(key) ) {
+      theEvent.returnValue = false;
+      if(theEvent.preventDefault) theEvent.preventDefault();
+   }
+}
 
 
 
@@ -19,12 +33,12 @@ function calc(){
 
    console.log(sum);
 
-   let round = Math.round(sum*100)/100 - 0.01;
+   let round = Math.round(sum*100)/100;
 
    console.log(round);
 
 
-      if(sum <= 6){
+      if(sum <= 6 ){
 
          result.innerHTML = `  <p>Sua nota na Av1 é  ${av1}</p>
                                  <p>Sua nota na Av2 é  ${av2}</p>
@@ -33,7 +47,7 @@ function calc(){
 
          result.innerHTML +=`<p style="color: rgb(224, 0, 0)">Você esta reprovado</p>`
          
-      }else if(sum >6){
+      }else if(sum >= 4){
          result.innerHTML = `  <p>Sua nota na Av1 é  ${av1}</p>
                                  <p>Sua nota na Av2 é  ${av2}</p>
                                     <p>Sua nota na Avd é  ${avd}</p>
