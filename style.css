@@ -62,9 +62,11 @@ label{
   letter-spacing: 0.2rem;
 }
 
-@media (max-width:400px) {
+@media (max-width:600px) {
   .content{
-    display: block;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   .main{
