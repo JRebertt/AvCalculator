@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   border: no;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .content{
@@ -13,10 +14,19 @@
   height: 35rem;
 }
 
+h2{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 20px ;
+  
+}
+
 .main{
   display: inline-flex;
   flex-direction:column;
-  margin: 20% 25%;
+  margin: 0 25%;
 }
 
 .main input{
@@ -28,13 +38,13 @@
 #btn{
   padding: 0.3rem;
   border-radius:3px;
-  margin: 20% 25%;
+  margin: 10% ;
   background-color: rgb(31, 173, 255);
 }
 
 #result {
   color: #fff;
   font-size: 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
