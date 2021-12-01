@@ -29,7 +29,11 @@ function calc(){
 
    console.log(av1, av2, avd);
   
-   let sum = (av1 + av2 + avd)/3;  
+   let calcul = (av1 + av2);
+
+   console.log(calcul)
+
+   let sum = (calcul + avd)/3;
 
    console.log(sum);
 
@@ -38,26 +42,54 @@ function calc(){
    console.log(round);
 
 
-      if(sum <= 6 ){
+      // if(sum <= 6 ){
 
-         result.innerHTML = `  <p>Sua nota na Av1 é  ${av1}</p>
-                                 <p>Sua nota na Av2 é  ${av2}</p>
-                                    <p>Sua nota na Avd é  ${avd}</p>
-                                       <p>Total:  ${round}</p>`
+      //    result.innerHTML = `<h2 class="text-warning"> Resultado </h2>
+      //                         <p>Sua nota na Av1 é  ${av1}</p>
+      //                            <p>Sua nota na Av2 é  ${av2}</p>
+      //                               <p>Sua nota na Avd é  ${avd}</p>
+      //                                  <p>Total:  ${round}</p>
+      //    `
 
-         result.innerHTML +=`<p class="text-danger">Você esta reprovado</p>`
+      //    result.innerHTML +=`<p class="text-danger">Você esta reprovado</p>`
          
-      }else if(sum >= 4){
-         result.innerHTML = `  <p>Sua nota na Av1 é  ${av1}</p>
-                                 <p>Sua nota na Av2 é  ${av2}</p>
-                                    <p>Sua nota na Avd é  ${avd}</p>
-                                       <p>Total:  ${round}</p>`
+      // }else if(sum >= 4){
+      //    result.innerHTML = ` <h2 class="text-warning"> Resultado </h2>
+      //                          <p>Sua nota na Av1 é  ${av1}</p>
+      //                            <p>Sua nota na Av2 é  ${av2}</p>
+      //                               <p>Sua nota na Avd é  ${avd}</p>
+      //                                  <p>Total:  ${round}</p>`
 
-         result.innerHTML +=`<p class="text-success">Você esta aprovado</p>`
-      }else{                    
-         result.innerHTML +=`<p class="text-warning"> Err 202 ? Chame o suport</p>` 
-      }
+      //    result.innerHTML +=`<p class="text-success">Você esta aprovado</p>`
+      // }else{                    
+      //    result.innerHTML +=`<p class="text-warning"> Err 202 ? Chame o suport</p>` 
+      // }
+
+      function test() {
+         if(sum <= 6 ){
+
+            result.innerHTML = `<h2 class="text-warning"> Resultado </h2>
+                                 <p>Sua nota na Av1 é  ${av1}</p>
+                                    <p>Sua nota na Av2 é  ${av2}</p>
+                                       <p>Sua nota na Avd é  ${avd}</p>
+                                          <p>Total:  ${round}</p>
+            `
    
+            result.innerHTML +=`<p class="text-danger">Você esta reprovado</p>`
+            
+         }else if(sum >= 4){
+            result.innerHTML = ` <h2 class="text-warning"> Resultado </h2>
+                                  <p>Sua nota na Av1 é  ${av1}</p>
+                                    <p>Sua nota na Av2 é  ${av2}</p>
+                                       <p>Sua nota na Avd é  ${avd}</p>
+                                          <p>Total:  ${round}</p>`
+   
+            result.innerHTML +=`<p class="text-success">Você esta aprovado</p>`
+         }else{                    
+            result.innerHTML +=`<p class="text-warning"> Err 202 ? Chame o suport</p>` 
+         }
+      }
+      return test()
    
 
 }
